@@ -18,12 +18,12 @@
       @blur="$v.email.$touch()"
     ></v-text-field>
     <v-text-field
-      v-model="namePlase"
-      :error-messages="namePlaseErrors"
-      label="Назва рганізації"
+      v-model="namePlace"
+      :error-messages="namePlaceErrors"
+      label="Назва організації"
       required
-      @change="$v.namePlase.$touch()"
-      @blur="$v.namePlase.$touch()"
+      @change="$v.namePlace.$touch()"
+      @blur="$v.namePlace.$touch()"
     ></v-text-field>
     <v-text-field
       v-model="phone"
@@ -36,10 +36,8 @@
     ></v-text-field>
     <v-text-field
       v-model="message"
-      :error-messages="phoneErrors"
       label="Повідомлення"
       :counter="300"
-      required
       @input="$v.message.$touch()"
       @blur="$v.message.$touch()"
     ></v-text-field>
@@ -63,7 +61,7 @@ export default {
   validations: {
     name: { required, maxLength: maxLength(50) },
     email: { required, email },
-    namePlase: { required },
+    namePlace: { required },
     phone: { required, maxLength: maxLength(10) },
     message: { required, maxLength: maxLength(300) }
   },
@@ -73,14 +71,15 @@ export default {
     name: "",
     email: "",
     phone: "",
-    message: ""
+    message: "",
+    namePlace: ""
   }),
 
   computed: {
-    namePlaseErrors() {
+    namePlaceErrors() {
       const errors = [];
-      if (!this.$v.namePlase.$dirty) return errors;
-      !this.$v.namePlase.required && errors.push("Item is required");
+      if (!this.$v.namePlace.$dirty) return errors;
+      !this.$v.namePlace.required && errors.push("Введіть назву організації");
       return errors;
     },
     nameErrors() {
@@ -88,7 +87,7 @@ export default {
       if (!this.$v.name.$dirty) return errors;
       !this.$v.name.maxLength &&
         errors.push("Name must be at most 10 characters long");
-      !this.$v.name.required && errors.push("Name is required.");
+      !this.$v.name.required && errors.push("Ім'я обов'язкове.");
       return errors;
     },
     phoneErrors() {
@@ -96,14 +95,14 @@ export default {
       if (!this.$v.phone.$dirty) return errors;
       !this.$v.phone.maxLength &&
         errors.push("phone must be at most 10 characters long");
-      !this.$v.phone.required && errors.push("phone is required.");
+      !this.$v.phone.required && errors.push("Введіть номер телефону");
       return errors;
     },
     emailErrors() {
       const errors = [];
       if (!this.$v.email.$dirty) return errors;
       !this.$v.email.email && errors.push("Must be valid e-mail");
-      !this.$v.email.required && errors.push("E-mail is required");
+      !this.$v.email.required && errors.push("E-mail обов'язковий");
       return errors;
     }
   },
@@ -116,7 +115,7 @@ export default {
       this.$v.$reset();
       this.name = "";
       this.email = "";
-      this.namePlase = "";
+      this.namePlace = "";
       this.phone = "";
       this.message = "";
     }

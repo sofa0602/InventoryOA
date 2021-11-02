@@ -4,7 +4,12 @@
     <v-container>
       <v-row justify="space-between">
         <v-col cols="12" md="6">
-          <CardAvatar v-for="image in images" :image="image.src" />
+          <CardAvatar
+            v-for="card in cardAvatar"
+            :image="card.src"
+            :title="card.title"
+            :key="card.src"
+          />
         </v-col>
         <v-col cols="12" md="5">
           <Title title="Отримати доступ" />
@@ -26,10 +31,25 @@ export default {
     Form
   },
   data: () => ({
-    images: [
-      { src: "avatar1.png" },
-      { src: "avatar1.png" },
-      { src: "avatar1.png" }
+    cardAvatar: [
+      {
+        src: "avatar1.png",
+        title: "Ігор Зубенко",
+        iconFacebook: "../assets/iconFacebook.svg",
+        iconEmail: "../assets/iconEmail.svg"
+      },
+      {
+        src: "avatar1.png",
+        title: "Максим Луцюк",
+        iconFacebook: "../assets/iconFacebook.svg",
+        iconEmail: "../assets/iconEmail.svg"
+      },
+      {
+        src: "avatar1.png",
+        title: "Анна Романюк",
+        iconFacebook: "../assets/iconFacebook.svg",
+        iconEmail: "../assets/iconEmail.svg"
+      }
     ]
   })
 };

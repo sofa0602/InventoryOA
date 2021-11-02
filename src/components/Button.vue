@@ -1,18 +1,34 @@
 <template>
-  <v-btn class="buttonLogIn" color="#7683F7" :min-width="width">
-    {{ title }}
-  </v-btn>
+  <v-dialog v-model="dialog" max-width="70%">
+    <template v-slot:activator="{ on, attrs }">
+      <v-btn
+        class="buttonLogIn"
+        color="#7683F7"
+        min-width="220"
+        v-bind="attrs"
+        v-on="on"
+      >
+        {{ title }}
+      </v-btn>
+    </template>
+    <Registration />
+  </v-dialog>
 </template>
 <script>
+import Registration from "./Registration.vue";
 export default {
+  components: {
+    Registration
+  },
+  data() {
+    return {
+      dialog: false
+    };
+  },
   props: {
     title: {
       type: String,
       default: "Увійти"
-    },
-    width: {
-      type: String,
-      default: "220px"
     }
   }
 };
