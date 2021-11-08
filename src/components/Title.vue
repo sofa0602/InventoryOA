@@ -1,5 +1,5 @@
 <template>
-  <div class="name text-h4 d-flex justify-center  ma-14">
+  <div class="name text-h4 d-flex justify-center  ma-10">
     {{ title }}
   </div>
 </template>

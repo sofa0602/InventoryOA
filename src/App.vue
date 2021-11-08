@@ -4,7 +4,7 @@
     <Main />
     <WorkWithUs />
     <Problem />
-    <Preference />
+    <Slider />
     <Command />
     <Footer />
   </v-app>
@@ -18,9 +18,11 @@ import Preference from "./components/Preference.vue";
 import Command from "./components/Command.vue";
 import WorkWithUs from "./components/WorkWithUs.vue";
 import Footer from "./components/Footer.vue";
+import Slider from "./components/Slider.vue";
 
 export default {
   components: {
+    Slider,
     Header,
     Main,
     Problem,

@@ -35,7 +35,7 @@ export default {
 </script>
 <style>
 .buttonLogIn {
-  border-radius: 15px !important;
+  border-radius: 10px !important;
   color: #fff !important;
   text-transform: none !important;
 }

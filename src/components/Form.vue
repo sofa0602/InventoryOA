@@ -3,7 +3,6 @@
     <v-text-field
       v-model="name"
       :error-messages="nameErrors"
-      :counter="50"
       label="П.І.Б."
       required
       @input="$v.name.$touch()"
@@ -28,24 +27,20 @@
     <v-text-field
       v-model="phone"
       :error-messages="phoneErrors"
-      :counter="10"
       label="Телефон"
       required
       @input="$v.phone.$touch()"
       @blur="$v.phone.$touch()"
     ></v-text-field>
+
     <v-text-field
       v-model="message"
       label="Повідомлення"
-      :counter="300"
       @input="$v.message.$touch()"
       @blur="$v.message.$touch()"
     ></v-text-field>
 
     <Button :title="title" @click="submit" />
-    <v-btn class="ml-6" @click="clear">
-      Очистити
-    </v-btn>
   </form>
 </template>
 <script>
@@ -110,15 +105,12 @@ export default {
   methods: {
     submit() {
       this.$v.$touch();
-    },
-    clear() {
-      this.$v.$reset();
-      this.name = "";
-      this.email = "";
-      this.namePlace = "";
-      this.phone = "";
-      this.message = "";
     }
   }
 };
 </script>
+<style scoped>
+.message1 {
+  min-height: 100px !important;
+}
+</style>

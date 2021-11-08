@@ -1,26 +1,36 @@
 <template>
-  <v-app-bar app class="app-bar-color" color="#fff" flat>
+  <v-app-bar
+    app
+    elevate-on-scroll
+    scroll-target="#scrolling-techniques-7"
+    color="#ffff"
+  >
     <Logo class="ml-16" />
     <v-spacer></v-spacer>
     <v-toolbar-items
-      :expand-on-hover="$vuetify.breakpoint.mdAndUp"
       v-for="item in items"
       :key="item.title"
-      class="hidden-sm-and-down"
+      class="hidden-sm-and-down pa-0"
     >
       <v-btn class="styleLink" :to="item.to" text>
         {{ item.title }}
       </v-btn>
     </v-toolbar-items>
-    <div class="hidden-sm-and-down pl-3">
+    <div class="hidden-sm-and-down pl-1  mr-16">
       <Button />
     </div>
-    <v-menu offset-y min-width="100%" transition="slide-y-transition">
+
+    <v-menu
+      offset-y
+      min-width="100%"
+      transition="slide-y-transition"
+      class="mt-0"
+    >
       <template v-slot:activator="{ attrs, on }">
         <v-app-bar-nav-icon v-bind="attrs" v-on="on" class="hidden-md-and-up">
         </v-app-bar-nav-icon>
       </template>
-      <v-list class="mt-1">
+      <v-list class="list">
         <v-list-item
           v-for="item in items"
           :key="item.to"
@@ -31,6 +41,9 @@
             {{ item.title }}
           </v-list-item-title>
         </v-list-item>
+        <div class="d-flex justify-center">
+          <Button />
+        </div>
       </v-list>
     </v-menu>
   </v-app-bar>
@@ -67,7 +80,8 @@ export default {
 };
 </script>
 <style scoped>
-.app-bar-color {
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15) !important;
+.pos {
+  display: flex;
+  justify-content: center;
 }
 </style>

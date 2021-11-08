@@ -28,9 +28,9 @@ p {
   color: #fff;
 }
 .problem {
-  font-size: 18px;
+  font-size: 22px;
   min-height: 280px;
-  background-image: url(../assets/imgProblem.png);
+  background-image: url(../assets/img-problem.png);
   background-size: cover;
   background-repeat: no-repeat;
 }
