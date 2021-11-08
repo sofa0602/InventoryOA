@@ -10,7 +10,7 @@
         :space="480"
         :display="5"
         :autoplay="true"
-        :autoplayTimeout="3500"
+        :autoplayTimeout="3000"
         :autoplayHoverPause="true"
         :perspective="0"
         border="0"

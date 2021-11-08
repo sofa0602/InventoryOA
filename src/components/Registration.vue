@@ -47,7 +47,7 @@
         ></v-text-field>
       </v-col>
       <v-col cols="12" align="center">
-        <v-btn class="buttonLogIn" color="#7683F7" :min-width="width">
+        <v-btn class="buttonLogIn" width="220px" color="#7683F7">
           Увійти
         </v-btn>
       </v-col>

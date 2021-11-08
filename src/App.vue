@@ -35,6 +35,10 @@ export default {
 </script>
 <style>
 @import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,700;1,400&display=swap");
+html {
+  margin: 0;
+  padding: 0;
+}
 body {
   font-family: Nunito;
   font-style: normal;

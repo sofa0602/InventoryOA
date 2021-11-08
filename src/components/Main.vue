@@ -1,17 +1,28 @@
 <template>
   <v-main class="main">
     <v-container>
-      <v-row justify-sm="space-around">
+      <v-row justify-sm="center">
+        <v-col cols="12" sm="6" class="d-sm-none d-flex">
+          <v-img :src="require('@/assets/main_icon.svg')"></v-img>
+        </v-col>
         <v-col align-self="center">
-          <h3 class="pb-8 ">Система Інвентаризації</h3>
-          <div class="pb-14 pb-sm-5 ">
+          <div
+            class=" pb-5 pb-sm-8 text-xl-h3 text-lg-h4 font-weight-medium text-h3"
+          >
+            Система Інвентаризації
+          </div>
+          <div
+            class="pb-5 pb-sm-16 text-lg-h5 text-xl-h4 text-h6 font-weight-regular"
+          >
             IO — це система інвентаризації розроблена для ведення електронного
             обліку обладнання та ліцензій програмного забезпечення на
             підприємстві.
           </div>
-          <Button />
+          <div class="d-none d-sm-flex"><Button /></div>
+          <div class="d-sm-none d-flex justify-center"><Button /></div>
         </v-col>
-        <v-col cols="12" sm="6">
+
+        <v-col cols="12" sm="6" class="d-none d-sm-flex">
           <v-img :src="require('@/assets/main_icon.svg')"></v-img>
         </v-col>
       </v-row>
@@ -30,7 +41,8 @@ export default {
 </script>
 <style scoped>
 .main {
+  font-family: Nunito !important;
+  line-height: 38px;
   background-color: rgba(217, 220, 245, 0.5);
-  font-size: 24px;
 }
 </style>
