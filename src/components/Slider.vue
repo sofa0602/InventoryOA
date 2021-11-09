@@ -78,8 +78,6 @@ export default {
 };
 </script>
 <style scoped>
-.p {
-}
 .text {
   font-size: 16px;
   line-height: 25px;
@@ -97,7 +95,6 @@ export default {
   margin: 10px 0;
   z-index: 10 !important;
 }
-
 .card-text {
   text-align: center;
   padding: 30px;

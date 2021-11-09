@@ -5,10 +5,10 @@
       <div class="wrapper d-flex justify-center mb-0">
         <v-row justify="center" class="mb-0">
           <v-col class="pa-0 mb-0" v-for="e in elipse" :key="e.id">
-            <div class="text mb-0">{{ e.text }}</div>
+            <div class="text mb-0">{{ e.text1 }}</div>
             <div class="circle-top text-circle mb-0">{{ e.id1 }}</div>
             <div class="circle-buttom text-circle mb-0">{{ e.id2 }}</div>
-            <div class="text1 mb-0">{{ e.text }}</div>
+            <div class="text1 text mb-0">{{ e.text2 }}</div>
           </v-col>
         </v-row>
       </div>
@@ -27,25 +27,29 @@ export default {
         id: 1,
         id1: "01",
         id2: "02",
-        text: "Легкий перегляд пов’язаної інформації у одному місці"
+        text1: "Внесення накладних з обладнанням та ліцензіями",
+        text2: "Перегляд предметів та приміщення у якому їх встановлено"
       },
       {
         id: 2,
         id1: "03",
         id2: "04",
-        text: "Легкий перегляд пов’язаної інформації у одному місці"
+        text1: "Перегляд предметів та їх власників",
+        text2: "Перегляд обладнання з індивідуальними QR-кодами"
       },
       {
         id: 3,
         id1: "05",
         id2: "06",
-        text: "Легкий перегляд пов’язаної інформації у одному місці"
+        text1: "Передача обладнання між власникам",
+        text2: "Відправлення обладнання у ремонт"
       },
       {
         id: 4,
         id1: "07",
         id2: "08",
-        text: "Легкий перегляд пов’язаної інформації у одному місці"
+        text1: "Списання  обладнання",
+        text2: "Утилізація обладнання"
       }
     ]
   })
@@ -58,20 +62,11 @@ export default {
 }
 .text {
   padding: 10px;
-  width: 48%;
-  min-height: 100px;
-  left: 50%;
-  top: 20%;
-  position: relative;
-  line-height: 27px;
+  max-width: 223px;
 }
 .text1 {
-  padding: 10px;
-  width: 48%;
-  min-height: 100px;
-  top: -20%;
   position: relative;
-  line-height: 27px;
+  left: 40%;
 }
 .wrapper {
   width: 81%;
@@ -81,10 +76,10 @@ export default {
   /*display: table-cell;*/
   vertical-align: middle;
   width: 180px;
-  height: 90px; /* as the half of the width */
+  height: 90px;
   background-color: #4354f2;
-  border-top-left-radius: 90px; /* 100px of height + 10px of border */
-  border-top-right-radius: 90px; /* 100px of height + 10px of border */
+  border-top-left-radius: 90px;
+  border-top-right-radius: 90px;
 }
 .circle-buttom {
   position: relative;
@@ -92,9 +87,9 @@ export default {
   vertical-align: middle;
   margin-left: 180px;
   width: 180px;
-  height: 90px; /* as the half of the width */
+  height: 90px;
   background-color: #4354f2;
-  border-bottom-left-radius: 90px; /* 100px of height + 10px of border */
+  border-bottom-left-radius: 90px;
   border-bottom-right-radius: 90px;
 }
 .text-circle {

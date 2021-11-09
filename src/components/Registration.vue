@@ -10,7 +10,7 @@
           class="ma-2"
           outlined
           color="#FF725E"
-          min-width="250px"
+          min-width="200px"
           min-height="50px"
         >
           <v-icon>mdi-google</v-icon>
@@ -20,7 +20,7 @@
           class="ma-2"
           outlined
           color="#484BF2"
-          min-width="250px"
+          min-width="200px"
           min-height="50px"
         >
           <v-icon>mdi-microsoft-windows</v-icon>

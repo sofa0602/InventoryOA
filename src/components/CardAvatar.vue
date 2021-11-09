@@ -14,12 +14,12 @@
             </v-list-item-title>
           </v-col>
           <v-col align="end" class="pt-0">
-            <v-icon color="#FFB27D" large class="pa-2">
-              mdi-facebook
-            </v-icon>
-            <v-icon color="#FFB27D" large class="pa-2">
-              mdi-email
-            </v-icon>
+            <v-btn class="ma-1" outlined fab color="#FFB27D">
+              <v-icon color="#FFB27D" large class="pa-2">mdi-facebook</v-icon>
+            </v-btn>
+            <v-btn class="ma-1" outlined fab color="#FFB27D">
+              <v-icon color="#FFB27D" large class="pa-2">mdi-email</v-icon>
+            </v-btn>
           </v-col>
         </v-list-item-content>
       </v-list-item>

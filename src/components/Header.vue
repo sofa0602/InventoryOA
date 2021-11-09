@@ -6,18 +6,18 @@
       scroll-target="#scrolling-techniques-7"
       color="#ffff"
     >
-      <Logo class="" />
+      <Logo class="ml-md-16" />
       <v-spacer></v-spacer>
       <v-toolbar-items
         v-for="item in items"
         :key="item.title"
-        class="hidden-sm-and-down pa-0"
+        class="hidden-md-and-down pa-0"
       >
         <v-btn class="styleLink" :to="item.to" text>
           {{ item.title }}
         </v-btn>
       </v-toolbar-items>
-      <div class="hidden-sm-and-down pl-2  ">
+      <div class="hidden-sm-and-down pl-2 mr-md-16 ">
         <Button />
       </div>
 
@@ -86,10 +86,6 @@ export default {
 };
 </script>
 <style scoped>
-.pos {
-  display: flex;
-  justify-content: center;
-}
 .h:hover {
   color: #ffffff !important;
   background-color: #a7c7f5;

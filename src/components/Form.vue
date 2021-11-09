@@ -39,8 +39,9 @@
       @input="$v.message.$touch()"
       @blur="$v.message.$touch()"
     ></v-text-field>
-
-    <Button :title="title" @click="submit" />
+    <div class="d-flex justify-center">
+      <Button :title="title" @click="submit" />
+    </div>
   </form>
 </template>
 <script>

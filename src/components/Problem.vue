@@ -30,7 +30,6 @@ p {
 .problem {
   font-size: 22px;
   height: 40vh;
-
   background-image: url(../assets/img-problem.png);
   background-size: cover;
   background-repeat: no-repeat;

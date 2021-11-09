@@ -3,7 +3,7 @@
     <Title title="Переваги" />
     <v-container>
       <v-row justify="space-around">
-        <v-col v-for="card in cards" align="center">
+        <v-col v-for="card in cards" align="center" :key="card.icon">
           <v-hover v-slot="{ hover }">
             <v-card
               :class="{ 'on-hover': hover }"
@@ -71,8 +71,5 @@ export default {
 .myCard {
   box-shadow: 0px 9px 40px rgba(28, 44, 190, 0.3) !important;
   border-radius: 15px !important;
-}
-.v-card.on-hover {
-  opacity: 0.7;
 }
 </style>

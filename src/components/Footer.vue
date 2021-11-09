@@ -1,11 +1,11 @@
 <template>
   <v-footer color="#D5DAFF">
-    <v-container class="d-flex justify-center">
-      <v-row>
+    <v-container>
+      <v-row justify="center">
         <v-col cols="12" align="center">
           <Logo />
         </v-col>
-        <v-col class="pa-0" cols="12" align="center">
+        <v-col class="pa-0" cols="6" align="center">
           <v-divider></v-divider>
         </v-col>
         <v-col class="pa-0" cols="12" align="center">
